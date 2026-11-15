@@ -7,7 +7,7 @@
 <meta name="description" content="Same prompts, three AIs. I compared ChatGPT, Gemini and Claude on features, accuracy and instruction following, then tested basic vs. detailed prompts.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../assets/style.css?v=4">
+<link rel="stylesheet" href="../assets/style.css?v=5">
 </head>
 <body>
 <header class="site-head"><div class="wrap">
@@ -105,6 +105,33 @@ document.querySelectorAll('[data-count]').forEach(function(n){
 var bar=document.querySelector('.progress');
 function prog(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';}
 window.addEventListener('scroll',prog,{passive:true});prog();
+
+/* highlights rail */
+var rail=document.querySelector('.rail');
+if(rail){
+  var step=function(){var c=rail.querySelector('.hcard');return c?c.getBoundingClientRect().width+16:320;};
+  var go=function(d){var max=rail.scrollWidth-rail.clientWidth;
+    if(d>0&&rail.scrollLeft>=max-4)rail.scrollTo({left:0,behavior:'smooth'});
+    else if(d<0&&rail.scrollLeft<=4)rail.scrollTo({left:max,behavior:'smooth'});
+    else rail.scrollBy({left:d*step(),behavior:'smooth'});};
+  document.querySelectorAll('.hb').forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.d);pause(6000);});});
+  var hold=false,until=0;function pause(ms){until=Date.now()+ms;}
+  rail.addEventListener('mouseenter',function(){hold=true;});rail.addEventListener('mouseleave',function(){hold=false;});
+  rail.addEventListener('focusin',function(){hold=true;});rail.addEventListener('focusout',function(){hold=false;});
+  rail.addEventListener('touchstart',function(){pause(8000);},{passive:true});
+  if(!reduce)setInterval(function(){if(!hold&&Date.now()>until&&!document.hidden)go(1);},3800);
+  /* drag to scroll */
+  var down=false,sx=0,sl=0,moved=false;
+  rail.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=rail.scrollLeft;rail.classList.add('drag');});
+  window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>4)moved=true;rail.scrollLeft=sl-dx;});
+  window.addEventListener('pointerup',function(){if(!down)return;down=false;rail.classList.remove('drag');pause(5000);});
+  rail.addEventListener('click',function(e){if(moved){e.preventDefault();moved=false;}},true);
+  rail.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){go(1);e.preventDefault();}if(e.key==='ArrowLeft'){go(-1);e.preventDefault();}});
+}
+/* cursor spotlight */
+document.querySelectorAll('.hcard, .featured, .tl-item.hl a').forEach(function(el){
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--x',(e.clientX-r.left)+'px');el.style.setProperty('--y',(e.clientY-r.top)+'px');});
+});
 /* filters */
 var fs=document.querySelectorAll('.filters .f'),items=document.querySelectorAll('.tl-item'),cnt=document.getElementById('fcount'),empty=document.querySelector('.empty');
 function apply(k){var n=0;items.forEach(function(li){var show=k==='all'||(k==='hl'?li.dataset.hl==='1':li.dataset.kind===k);
