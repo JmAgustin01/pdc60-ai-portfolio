@@ -205,3 +205,5 @@ blockquote.pull cite::before { content: "\2014\00a0"; }
 .refl h3 { margin: 10px 0 6px; }
 .refl p { font-size: 15px; color: var(--ink-2); margin: 0; }
 @media (max-width: 640px) { .refl-grid { grid-template-columns: 1fr; } }
+
+[id] { scroll-margin-top: 80px; }
