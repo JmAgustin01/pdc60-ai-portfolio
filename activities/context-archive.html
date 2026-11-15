@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lost Context Archive · John Michael C. Agustin · PDC60 AI Portfolio</title>
+<meta name="description" content="A second escape game on context management and retrieval-aware prompting: state, compression, retrieval filters, grounding and citations.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../index.html"><span class="dot">JM</span>PDC60 AI Portfolio</a>
+  <nav class="site-nav"><a href="../index.html">Home</a><a href="../projects/kualta-chatbot.html">Kualta Chatbot</a><a href="../index.html#activities" class=on>Activities</a><a href="../index.html#about">About</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+<div class="page-head">
+  <div class="crumbs"><a href="../index.html">Home</a> / <a href="../index.html#activities">Activities</a> / The Lost Context Archive</div>
+  <span class="eyebrow"><span class="tag game">Escape game</span> Sep 2, 2026</span>
+  <h1>Lab Quiz: The Lost Context Archive, Protocol Ground Truth</h1>
+  <p class="lede">A second escape game on context management and retrieval-aware prompting: state, compression, retrieval filters, grounding and citations.</p>
+  <div class="facts"><span class="chip">Format <b>Team escape game</b></span><span class="chip">Platform <b>Free ChatGPT</b></span><span class="chip">Time <b>90 minutes</b></span></div>
+  <div class="toc"><a href="#story">The game</a><a href="#chambers">Chambers</a><a href="#skills">Skills</a><a href="#link">Connection to my project</a></div>
+</div>
+<article>
+
+<h2 id="story">The game</h2>
+<p>Minutes before a university policy assistant goes live, its Context Archive is corrupted. Current rules are mixed with obsolete memos, restricted records, irrelevant chats and malicious instructions. Our team had to restore six chambers and defeat a final override before bad information could reach students.</p>
+<p>Like the Prompt Vault, the whole game ran inside one free ChatGPT conversation, with an AI game master (<b>NEXUS</b>), a 1,500-token wallet, repair attempts, puzzles and a ledger.</p>
+<div class="btn-row"><a class="btn" href="https://chatgpt.com/share/6a97c5a7-8138-83ec-87d8-a84e482e6cfc">Open our team's game conversation</a></div>
+
+<h2 id="chambers">The six chambers</h2>
+<div class="table-wrap"><table><thead><tr><th>Chamber</th><th>Challenge</th></tr></thead><tbody><tr><td>1 · State Vault</td><td>Rebuild the current state of a conversation after corrections and topic changes.</td></tr><tr><td>2 · Compression Engine</td><td>Compress a long history without losing decisions, constraints or open questions.</td></tr><tr><td>3 · Retrieval Terminal</td><td>Design a search query, metadata filters and a source shortlist.</td></tr><tr><td>4 · Authority Chamber</td><td>Rank evidence by authority, recency, scope and access permission.</td></tr><tr><td>5 · Grounding Firewall</td><td>Require citations, abstain when unsupported, protect private data and resist injected instructions.</td></tr><tr><td>6 · Citation Observatory</td><td>Audit whether each cited source really supports its claim.</td></tr><tr><td>Final · Archive Override</td><td>Combine state, retrieval, grounding and safe failure in one prompt.</td></tr></tbody></table></div>
+
+<h2 id="skills">Skills practiced</h2>
+<div class="grid2">
+<div class="card"><h4>Context management</h4><p class="muted">Keep a compact, accurate state. When a user corrects something, the old value must stop being used.</p></div>
+<div class="card"><h4>Retrieval design</h4><p class="muted">Filter sources by relevance, authority, recency, scope and permission before anything reaches the model.</p></div>
+<div class="card"><h4>Grounding</h4><p class="muted">Every claim gets a citation, and “the sources don't say” is a valid answer.</p></div>
+<div class="card"><h4>Security</h4><p class="muted">Treat instructions inside retrieved documents as data, never as commands, and keep restricted records out of answers.</p></div>
+</div>
+
+<h2 id="link">How this connects to my project</h2>
+<p>This game is the theory behind the <a href="../projects/kualta-chatbot.html">Kualta chatbot</a>. The bot uses a similarity threshold so weak matches never reach the LLM, answers only from retrieved chunks, hands off when it can't support an answer, and screens for prompt injection. Those are the Retrieval Terminal, the Grounding Firewall and safe failure, in production.</p>
+
+<nav class="pager"><a href="prompt-vault.html"><span>&larr; Previous</span><b>The Prompt Vault</b></a><a href="agentic-ai.html" style="text-align:right"><span>Next &rarr;</span><b>Agentic AI</b></a></nav>
+</article>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <span>John Michael C. Agustin · BSIT 4A · Angeles University Foundation</span>
+  <span><a href="https://github.com/JmAgustin01">GitHub</a> · <a href="https://www.linkedin.com/in/john-michael-agustin-b46901378">LinkedIn</a> · <a href="https://jmagustin01.github.io">Main portfolio</a></span>
+</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+</body>
+</html>

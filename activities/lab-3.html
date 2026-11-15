@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab #3 · John Michael C. Agustin · PDC60 AI Portfolio</title>
+<meta name="description" content="I rewrote “Explain subnetting” using RTCFC, COSTAR, RISEN, CRAFT, RACE, TRACE and CRISPE.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../index.html"><span class="dot">JM</span>PDC60 AI Portfolio</a>
+  <nav class="site-nav"><a href="../index.html">Home</a><a href="../projects/kualta-chatbot.html">Kualta Chatbot</a><a href="../index.html#activities" class=on>Activities</a><a href="../index.html#about">About</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+<div class="page-head">
+  <div class="crumbs"><a href="../index.html">Home</a> / <a href="../index.html#activities">Activities</a> / Lab #3</div>
+  <span class="eyebrow"><span class="tag lab">Lab</span> Aug 19, 2026</span>
+  <h1>Lab Exercise #3: One Prompt, Seven Prompt Engineering Frameworks</h1>
+  <p class="lede">I rewrote “Explain subnetting” using RTCFC, COSTAR, RISEN, CRAFT, RACE, TRACE and CRISPE.</p>
+  <div class="facts"><span class="chip">Original prompt <b>“Explain subnetting.”</b></span><span class="chip">Frameworks <b>7</b></span></div>
+  <div class="toc"><a href="#rtcfc">RTCFC</a><a href="#costar">COSTAR</a><a href="#risen">RISEN</a><a href="#craft">CRAFT</a><a href="#race">RACE</a><a href="#trace">TRACE</a><a href="#crispe">CRISPE</a><a href="#compare">Comparison</a></div>
+</div>
+<article>
+
+<blockquote class="prompt"><span class="lbl">Original prompt</span>Explain subnetting.</blockquote>
+<p>The task: keep the meaning the same, but rebuild the prompt seven times, once per framework, including every component.</p>
+<h3 id="rtcfc">1. RTCFC</h3><p class="muted mono" style="font-size:13px">Role · Task · Context · Format · Constraint</p><blockquote class="prompt"><span class="lbl">RTCFC prompt</span>Role: You are a Certified Network Engineer and IT instructor.
+Task: Explain what subnetting is, how it works, and why we use it.
+Context: I am a beginner learning computer networking fundamentals.
+Format: Three sections, each with a definition, an analogy, and a use case.
+Constraint: Keep it beginner-friendly and avoid overly complex binary math.</blockquote><h3 id="costar">2. COSTAR</h3><p class="muted mono" style="font-size:13px">Context · Objective · Style · Tone · Audience · Response</p><blockquote class="prompt"><span class="lbl">COSTAR prompt</span>Context: I am learning IT fundamentals and need to know how IP networks are broken up.
+Objective: Give a complete but easy-to-understand explanation of subnetting.
+Style: Informative and professional.
+Tone: Positive and clear.
+Audience: A tech-curious learner studying computer networking for the first time.
+Response: Start with a basic definition, explain what subnet masks do, and give a simple numeric example.</blockquote><h3 id="risen">3. RISEN</h3><p class="muted mono" style="font-size:13px">Role · Instructions · Steps · End goal · Narrowing</p><blockquote class="prompt"><span class="lbl">RISEN prompt</span>Role: Senior Network Architect.
+Instructions: Explain subnetting, focusing on network IDs, host IDs, and subnet masks.
+Steps:
+  1. Explain what an IP address and a subnet mask do together.
+  2. Explain “borrowing bits.”
+  3. Show how subnetting limits broadcast domains.
+End goal: Make sure I understand the difference between local and global routing of network traffic.
+Narrowing: Stick to the basics of IPv4 subnetting.</blockquote><h3 id="craft">4. CRAFT</h3><p class="muted mono" style="font-size:13px">Context · Role · Action · Format · Target</p><blockquote class="prompt"><span class="lbl">CRAFT prompt</span>Context: Modern IT infrastructure relies heavily on organized local area networks (LANs).
+Role: Technical writer.
+Action: Break subnetting down into digestible concepts for a learner.
+Format: A bulleted list followed by a summary table of CIDR notations.
+Target: Anyone trying to grasp basic IT networking concepts.</blockquote><h3 id="race">5. RACE</h3><p class="muted mono" style="font-size:13px">Role · Action · Context · Expectation</p><blockquote class="prompt"><span class="lbl">RACE prompt</span>Role: Cisco Certified Network Associate (CCNA) instructor.
+Action: Describe subnetting by comparing a flat (non-subnetted) network with a segmented one.
+Context: Flat networks have performance problems caused by broadcast traffic.
+Expectation: Help me understand how a subnet mask works as a filter that separates the network part from the host part.</blockquote><h3 id="trace">6. TRACE</h3><p class="muted mono" style="font-size:13px">Task · Request · Action · Context · Example</p><blockquote class="prompt"><span class="lbl">TRACE prompt</span>Task: Explain the concept and mechanics of subnetting.
+Request: Break down how an IP address is split into network and host portions.
+Action: Give a step-by-step conceptual walkthrough.
+Context: IP addresses are finite, and networks need efficient traffic management.
+Example: Use a standard network like 192.168.1.0/24 to show how it can be divided.</blockquote><h3 id="crispe">7. CRISPE</h3><p class="muted mono" style="font-size:13px">Capacity · Role · Insight · Statement · Personality · Experiment</p><blockquote class="prompt"><span class="lbl">CRISPE prompt</span>Capacity: Expert in IP addressing and subnetting architecture.
+Role: Friendly IT mentor.
+Insight: Subnetting isn't just math; it's about traffic control, security boundaries, and efficiency.
+Statement: Explain subnetting through the idea of logical network division.
+Personality: Patient, precise, and practical.
+Experiment: Include a real-world exercise or mental model I can use to spot subnetting in daily life, like a home router's guest network.</blockquote>
+<h2 id="compare">What I noticed</h2>
+<div class="table-wrap"><table><thead><tr><th>Framework</th><th>Best for</th></tr></thead><tbody><tr><td>RTCFC</td><td>Everyday technical requests where the output format matters</td></tr><tr><td>COSTAR</td><td>Writing that has to fit an audience and tone, like announcements</td></tr><tr><td>RISEN</td><td>Teaching in a fixed order, step by step</td></tr><tr><td>CRAFT</td><td>Documentation-style output with a set format</td></tr><tr><td>RACE</td><td>Short, focused prompts with a clear expected outcome</td></tr><tr><td>TRACE</td><td>Explanations anchored on a concrete example</td></tr><tr><td>CRISPE</td><td>Mentoring-style answers with a personality and an exercise</td></tr></tbody></table></div>
+<p>Every framework pushed me to add the things “Explain subnetting” was missing: who the answer is for, what form it should take, and what to leave out. The frameworks mostly differ in which of those they make you think about first.</p>
+
+<nav class="pager"><a href="lab-2.html"><span>&larr; Previous</span><b>Lab #2</b></a><a href="broken-bot.html" style="text-align:right"><span>Next &rarr;</span><b>The Broken Bot Labyrinth</b></a></nav>
+</article>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <span>John Michael C. Agustin · BSIT 4A · Angeles University Foundation</span>
+  <span><a href="https://github.com/JmAgustin01">GitHub</a> · <a href="https://www.linkedin.com/in/john-michael-agustin-b46901378">LinkedIn</a> · <a href="https://jmagustin01.github.io">Main portfolio</a></span>
+</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+</body>
+</html>

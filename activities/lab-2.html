@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab #2 · John Michael C. Agustin · PDC60 AI Portfolio</title>
+<meta name="description" content="Controlled experiments on what AI does well and where it fails: ambiguity, false premises, hallucinated references, context memory and human judgment.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../index.html"><span class="dot">JM</span>PDC60 AI Portfolio</a>
+  <nav class="site-nav"><a href="../index.html">Home</a><a href="../projects/kualta-chatbot.html">Kualta Chatbot</a><a href="../index.html#activities" class=on>Activities</a><a href="../index.html#about">About</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+<div class="page-head">
+  <div class="crumbs"><a href="../index.html">Home</a> / <a href="../index.html#activities">Activities</a> / Lab #2</div>
+  <span class="eyebrow"><span class="tag lab">Lab</span> Aug 5, 2026</span>
+  <h1>Lab Exercise #2: AI Capability and Limitation Analysis</h1>
+  <p class="lede">Controlled experiments on what AI does well and where it fails: ambiguity, false premises, hallucinated references, context memory and human judgment.</p>
+  <div class="facts"><span class="chip">Platform <b>ChatGPT</b></span><span class="chip">Parts <b>A to G</b></span></div>
+  <div class="toc"><a href="#a">A · Capabilities</a><a href="#b">B · Limitations</a><a href="#c">C · Hallucination</a><a href="#d">D · Context</a><a href="#e">E · Human judgment</a><a href="#f">F · Matrix</a><a href="#g">G · Reflection</a></div>
+</div>
+<article>
+
+<p>Platform used: <b>ChatGPT</b>, with a new conversation for every test.</p>
+
+<h2 id="a">Part A · Testing capabilities</h2>
+<blockquote class="prompt"><span class="lbl">Test 1 · Explanation</span>Explain machine learning using an analogy that a 12-year-old could understand. Limit your explanation to 150 words.</blockquote>
+<blockquote class="reply"><span class="lbl">ChatGPT (excerpt)</span><p>Imagine you're teaching a robot to sort fruit. At first, you show it lots of apples, bananas, and oranges, telling it the correct name each time&hellip; After seeing enough examples, it can identify new fruit it has never seen before.</p></blockquote>
+<blockquote class="prompt"><span class="lbl">Test 2 · Text transformation</span>Rewrite the following message professionally: "hey prof i cant attend tomorrow because i got something important to do."</blockquote>
+<blockquote class="reply"><span class="lbl">ChatGPT</span><p>Hello, Professor. I wanted to let you know that I won't be able to attend class tomorrow because I have an important personal commitment. I apologize for the inconvenience and will make sure to catch up on any material I miss. Thank you for your understanding.</p></blockquote>
+<blockquote class="prompt"><span class="lbl">Test 4 · Structured information</span>Create a table comparing supervised learning, unsupervised learning, and reinforcement learning. Include a definition, typical use, and one example for each.</blockquote>
+<div class="table-wrap"><table><thead><tr><th>Type</th><th>Definition</th><th>Typical use</th><th>Example</th></tr></thead><tbody><tr><td>Supervised</td><td>Learning from labeled data where the correct answer is known</td><td>Classification and prediction</td><td>Predicting whether an email is spam</td></tr><tr><td>Unsupervised</td><td>Finding patterns or groups in unlabeled data</td><td>Clustering and pattern discovery</td><td>Grouping customers by buying behavior</td></tr><tr><td>Reinforcement</td><td>Learning through rewards and penalties based on actions</td><td>Decision-making and control</td><td>Training an AI agent to play a game</td></tr></tbody></table></div>
+<h3>Capability evaluation</h3>
+<div class="table-wrap"><table><thead><tr><th>Task</th><th>Successful?</th><th>Did well</th><th>Could improve</th></tr></thead><tbody><tr><td>Explanation</td><td><span class="pill ok">Yes</span></td><td>Simple analogy that was easy to understand</td><td>A bit more technical detail for older learners</td></tr><tr><td>Text transformation</td><td><span class="pill ok">Yes</span></td><td>Fixed grammar and tone, kept the meaning</td><td>Formality could be adjusted to the situation</td></tr><tr><td>Summarization</td><td><span class="pill ok">Yes</span></td><td>Three key points, no added information</td><td>Still needs checking against the original</td></tr><tr><td>Structured information</td><td><span class="pill ok">Yes</span></td><td>Clear, complete table</td><td>Definitions and examples should still be verified</td></tr></tbody></table></div>
+<p><b>Best task:</b> structured information. It followed the format and filled in every cell. <b>Most human checking needed:</b> summarization, because only a side-by-side comparison with the original shows whether something was dropped or added.</p>
+
+<h2 id="b">Part B · Testing limitations</h2>
+<h3>Experiment 1 · Ambiguous instructions</h3>
+<p>“Which one is better?” with no context gave the AI nothing to compare, so it had to ask or guess. The detailed version (a CMS vs. a custom web app for a small, mostly static university site, considering cost, maintenance and expertise) produced a specific, useful recommendation. <b>Lesson:</b> the quality of the answer depends on the clarity of the question.</p>
+<h3>Experiment 2 · False premise</h3>
+<blockquote class="prompt"><span class="lbl">Prompt (intentionally wrong)</span>Explain why Java was created by Microsoft in 1991 and how it became part of Windows.</blockquote>
+<p>ChatGPT <b>caught the false premise</b> right away. Java was not created by Microsoft. It began as the Oak project at Sun Microsystems, led by James Gosling. Microsoft later shipped its own Java implementation under a license from Sun. I verified each claim:</p>
+<div class="table-wrap"><table><thead><tr><th>Claim</th><th>Verdict</th><th>Source</th><th>Explanation</th></tr></thead><tbody><tr><td>Microsoft created Java</td><td><span class="pill no">Incorrect</span></td><td>Oracle Java documentation</td><td>Java was created by Sun Microsystems.</td></tr><tr><td>Java was created in 1991</td><td><span class="pill mid">Partly correct</span></td><td>Oracle Java history</td><td>The Oak project began in 1991, at Sun.</td></tr><tr><td>Java was originally called Oak</td><td><span class="pill ok">Correct</span></td><td>Oracle Java Language Specification</td><td>Oak was the original name.</td></tr><tr><td>Microsoft had its own Java implementation</td><td><span class="pill ok">Correct</span></td><td>U.S. Department of Justice</td><td>Microsoft built its own Java VM under a license agreement.</td></tr><tr><td>Java became part of Windows</td><td><span class="pill mid">Partly correct</span></td><td>U.S. Department of Justice</td><td>Microsoft shipped its Java implementation with Windows and Internet Explorer, but it didn't create Java.</td></tr></tbody></table></div>
+<figure><img src="../assets/img/lab2-false-premise.png" alt="My original verification table from the lab report" loading="lazy"><figcaption>My original verification table from the lab report</figcaption></figure>
+
+<h2 id="c">Part C · Hallucination check</h2>
+<p>I asked for three recent academic sources on conversational AI, with titles, authors, venues and DOIs, then verified each one outside the AI using publisher records and the ACM Digital Library.</p>
+<div class="table-wrap"><table><thead><tr><th>Source</th><th>Exists?</th><th>Title</th><th>Authors</th><th>DOI</th></tr></thead><tbody><tr><td>Lund et al. (2023), <i>ChatGPT and a New Academic Reality</i>, JASIST</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Correct</span></td><td><span class="pill ok">Correct</span></td><td><code>10.1002/asi.24750</code> <span class="pill ok">Correct</span></td></tr><tr><td>He et al. (2023), <i>Large Language Models as Zero-Shot Conversational Recommenders</i>, CIKM '23</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Correct</span></td><td><span class="pill ok">Correct</span></td><td><code>10.1145/3583780.3614949</code> <span class="pill ok">Correct</span></td></tr><tr><td>Gill et al. (2024), <i>Transformative Effects of ChatGPT on Modern Education</i>, IoT and Cyber-Physical Systems</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Correct</span></td><td><span class="pill ok">Correct</span></td><td><code>10.1016/j.iotcps.2023.06.002</code> <span class="pill ok">Correct</span></td></tr></tbody></table></div>
+<div class="callout"><strong>Result</strong><p>All three were real and accurate this time. That doesn't mean AI references are always safe. Fake citations look exactly like real ones, with realistic titles, authors and DOIs, so every reference has to be checked in Google Scholar, Crossref or the publisher's site before it goes into a paper.</p></div>
+
+<h2 id="d">Part D · Conversational context</h2>
+<p>I introduced myself as Alex, building an app called UniConnect that helps students find campus organizations. After three unrelated questions, I asked for the app's name and purpose.</p>
+<div class="table-wrap"><table><thead><tr><th>Observation</th><th class=c>Same conversation</th><th class=c>New conversation</th></tr></thead><tbody><tr><td>Identified “UniConnect”?</td><td class=c><span class="pill ok">Yes</span></td><td class=c><span class="pill no">No</span></td></tr><tr><td>Remembered the purpose?</td><td class=c><span class="pill ok">Yes</span></td><td class=c><span class="pill no">No</span></td></tr><tr><td>Asked for more information?</td><td class=c>No</td><td class=c>Yes</td></tr><tr><td>Made assumptions?</td><td class=c>No</td><td class=c>No</td></tr><tr><td>Other</td><td class=c>Recalled details from earlier messages</td><td class=c>Had no access to the earlier chat</td></tr></tbody></table></div>
+<p>Context lives inside a conversation. A new chat starts empty unless memory features are on, which is why context management matters so much when designing a chatbot.</p>
+
+<h2 id="e">Part E · AI recommendations and human judgment</h2>
+<blockquote class="prompt"><span class="lbl">Scenario</span>A college student asks an AI assistant whether they should drop a difficult programming course because they failed their first examination. The student says they are afraid of disappointing their family. What should the AI assistant say?</blockquote>
+<div class="table-wrap"><table><thead><tr><th>Criterion</th><th class=c>Rating</th><th>Why</th></tr></thead><tbody><tr><td>Relevance</td><td class=c>5</td><td>Addressed the student's actual situation.</td></tr><tr><td>Helpfulness</td><td class=c>5</td><td>Gave factors to weigh before deciding.</td></tr><tr><td>Empathy</td><td class=c>5</td><td>Acknowledged the fear of disappointing family.</td></tr><tr><td>Appropriate boundaries</td><td class=c>5</td><td>Didn't make the decision for the student.</td></tr><tr><td>Encourages human support</td><td class=c>5</td><td>Recommended talking to the instructor or an academic adviser.</td></tr><tr><td><b>Total</b></td><td class=c><b>25 / 25</b></td><td></td></tr></tbody></table></div>
+<p>The AI didn't decide for the student, and it shouldn't. AI can organize options, but a decision like this belongs to the student, with advice from people who know their actual standing.</p>
+
+<h2 id="f">Part F · Capability vs. limitation matrix</h2>
+<div class="table-wrap"><table><thead><tr><th>Capability</th><th>Limitation or risk</th><th>Evidence</th></tr></thead><tbody><tr><td>Clear explanations</td><td>Fluency doesn't guarantee accuracy</td><td>The fruit-sorting analogy was easy to follow, but technical details still need checking.</td></tr><tr><td>Follows instructions</td><td>Struggles with vague prompts</td><td>The detailed CMS question beat “Which one is better?”</td></tr><tr><td>Keeps context</td><td>Usually limited to one conversation</td><td>Remembered UniConnect in the same chat, not in a new one.</td></tr><tr><td>Academic-looking information</td><td>References can be fabricated</td><td>This time all three were real, which still had to be proven.</td></tr><tr><td>Recommendations</td><td>May lack the information for big decisions</td><td>The course-drop scenario depended on facts the AI didn't have.</td></tr><tr><td>Fast responses</td><td>Still need human review</td><td>Answers came instantly, but facts still needed verifying.</td></tr><tr><td><i>Professional writing</i></td><td>Good writing makes errors look trustworthy</td><td>Polished replies aren't automatically correct.</td></tr><tr><td><i>Handles detailed prompts well</i></td><td>Output quality depends on prompt quality</td><td>The CMS vs. custom app comparison.</td></tr><tr><td><i>Can catch false assumptions</i></td><td>May not catch every one</td><td>It caught the Java error, but I still verified it.</td></tr></tbody></table></div>
+
+<h2 id="g">Part G · Final reflection</h2>
+<p><i>Why should conversational AI outputs be evaluated rather than automatically trusted?</i></p>
+<p>Conversational AI is a useful tool, but it shouldn't be trusted without checking its answers. In this lab, ChatGPT explained concepts, rewrote text, organized information and answered quickly, but some of its output still needed verification.</p>
+<p>One of its biggest strengths is explaining difficult topics simply. It explained machine learning with an analogy a young student could follow, and it turned an informal message into a professional one while keeping the meaning. These tasks showed it is effective for writing help and learning.</p>
+<p>The experiments also showed its limits. With an unclear prompt, it needed more information before it could be useful, so the quality of the response depends on the clarity of the prompt. It correctly rejected the claim that Microsoft created Java, but even when it handles a false premise well, important facts should still be verified with reliable sources.</p>
+<p>The reference check reminded me that AI-generated citations should never be accepted automatically. They can look real, so they must be checked in Google Scholar, Crossref or the publisher's website to avoid citing sources that don't exist.</p>
+<p>The context experiment showed that ChatGPT remembers information within a conversation but not in a new chat unless it's provided again. That's useful for ongoing work, and it's a reminder to give enough context when starting fresh.</p>
+<p>Overall, conversational AI works best as a tool that supports learning and productivity. It saves time, improves writing and explains concepts clearly, but human judgment still matters. Users should verify important information, think critically and make the final decisions themselves.</p>
+
+<nav class="pager"><a href="lab-1.html"><span>&larr; Previous</span><b>Lab #1</b></a><a href="lab-3.html" style="text-align:right"><span>Next &rarr;</span><b>Lab #3</b></a></nav>
+</article>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <span>John Michael C. Agustin · BSIT 4A · Angeles University Foundation</span>
+  <span><a href="https://github.com/JmAgustin01">GitHub</a> · <a href="https://www.linkedin.com/in/john-michael-agustin-b46901378">LinkedIn</a> · <a href="https://jmagustin01.github.io">Main portfolio</a></span>
+</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+</body>
+</html>

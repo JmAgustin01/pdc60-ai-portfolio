@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab #1 · John Michael C. Agustin · PDC60 AI Portfolio</title>
+<meta name="description" content="Same prompts, three AIs. I compared ChatGPT, Gemini and Claude on features, accuracy and instruction following, then tested basic vs. detailed prompts.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../index.html"><span class="dot">JM</span>PDC60 AI Portfolio</a>
+  <nav class="site-nav"><a href="../index.html">Home</a><a href="../projects/kualta-chatbot.html">Kualta Chatbot</a><a href="../index.html#activities" class=on>Activities</a><a href="../index.html#about">About</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+<div class="page-head">
+  <div class="crumbs"><a href="../index.html">Home</a> / <a href="../index.html#activities">Activities</a> / Lab #1</div>
+  <span class="eyebrow"><span class="tag lab">Lab</span> Jul 29, 2026</span>
+  <h1>Lab Exercise #1: Exploring and Comparing Modern Conversational AI Platforms</h1>
+  <p class="lede">Same prompts, three AIs. I compared ChatGPT, Gemini and Claude on features, accuracy and instruction following, then tested basic vs. detailed prompts.</p>
+  <div class="facts"><span class="chip">Platforms <b>ChatGPT · Gemini · Claude</b></span><span class="chip">Parts <b>A to D</b></span></div>
+  <div class="toc"><a href="#a">A · Exploration</a><a href="#b">B · Same prompt</a><a href="#c">C · Prompt modification</a><a href="#d">D · Reflection</a></div>
+</div>
+<article>
+
+<h2 id="a">Part A · Platform exploration</h2>
+<p>I spent time on each platform and recorded what I could actually test.</p>
+<div class="table-wrap"><table><thead><tr><th>Feature</th><th>ChatGPT</th><th>Google Gemini</th><th>Claude</th></tr></thead><tbody><tr><td>Developer</td><td>OpenAI</td><td>Google</td><td>Anthropic</td></tr><tr><td>Account required?</td><td>Yes, for full features</td><td>Google account</td><td>Yes, for the chat interface (also available through the API)</td></tr><tr><td>General questions</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span></td></tr><tr><td>Analyzes uploaded files</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span> PDFs, docs, code, CSVs</td><td><span class="pill ok">Yes</span> documents, spreadsheets, PDFs, code</td></tr><tr><td>Analyzes images</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span> multimodal</td><td><span class="pill ok">Yes</span></td></tr><tr><td>Current / web information</td><td>Yes, when web access is on</td><td>Yes, grounded in Google Search</td><td>Yes, when web search is on</td></tr><tr><td>Keeps conversation context</td><td><span class="pill ok">Yes</span></td><td>Yes, multi-turn history</td><td>Yes, in a chat, and across chats with memory on</td></tr><tr><td>Notable feature</td><td>Coding, writing, data analysis, image generation, custom GPTs</td><td>Very large context window; native text, audio, image and video input; runs code to check math</td><td>Creates files and artifacts (docs, sheets, slides, code), runs code, connects to tools through MCP</td></tr></tbody></table></div>
+
+<h2 id="b">Part B · Same prompt, different AI</h2>
+<p>I sent four identical prompts to all three platforms, each in a new conversation.</p>
+<blockquote class="prompt"><span class="lbl">Prompt 1 · Knowledge</span>Explain how cloud computing works to a first-year college student. Limit your answer to 150 words.</blockquote>
+<p>All three explained it well, in different styles. ChatGPT gave a compact, plain definition. Gemini named real providers (AWS, Azure, Google Cloud) and introduced virtualization. Claude used an electricity-grid analogy and everyday examples like Netflix and Google Drive.</p>
+<blockquote class="prompt"><span class="lbl">Prompt 2 · Reasoning</span>A university computer laboratory has 40 computers. Each computer requires approximately 300 watts during operation. If all computers operate for 6 hours, estimate their total energy consumption in kilowatt-hours. Explain your calculation.</blockquote>
+<p>All three reached the correct answer, <b>72 kWh</b> (40 &times; 0.3 kW = 12 kW; 12 kW &times; 6 h = 72 kWh). Claude also noted that real usage could be lower if machines idle, or higher if monitors are counted.</p>
+<div class="shots">
+<figure><img src="../assets/img/lab1-partb-p2-chatgpt.png" alt="ChatGPT · 72 kWh" loading="lazy"><figcaption>ChatGPT · 72 kWh</figcaption></figure>
+<figure><img src="../assets/img/lab1-partb-p2-gemini.png" alt="Gemini · 72 kWh, three labeled steps" loading="lazy"><figcaption>Gemini · 72 kWh, three labeled steps</figcaption></figure>
+<figure><img src="../assets/img/lab1-partb-p2-claude.png" alt="Claude · 72 kWh, with assumptions noted" loading="lazy"><figcaption>Claude · 72 kWh, with assumptions noted</figcaption></figure>
+</div>
+<blockquote class="prompt"><span class="lbl">Prompt 3 · Writing</span>Write a professional email informing students that their laboratory class tomorrow will be moved online because of scheduled maintenance.</blockquote>
+<p>ChatGPT wrote a short, polite email. Gemini and Claude added structured details (date, time, platform, link) as placeholders. Claude was the only one to include a subject line.</p>
+<blockquote class="prompt"><span class="lbl">Prompt 4 · Instruction following</span>Explain artificial intelligence using exactly three bullet points. Each bullet must contain no more than 15 words.</blockquote>
+<p>All three followed the constraint: exactly three bullets, each under 15 words. Claude labeled its bullets “What it is”, “How it works” and “Where it's used”.</p>
+
+<h3>Evaluation</h3>
+<div class="table-wrap"><table><thead><tr><th>Criterion</th><th class=c>ChatGPT</th><th class=c>Gemini</th><th class=c>Claude</th></tr></thead><tbody><tr><td>Accuracy</td><td class=c>4</td><td class=c>4</td><td class=c>4</td></tr><tr><td>Relevance</td><td class=c>4</td><td class=c>5</td><td class=c>4</td></tr><tr><td>Clarity</td><td class=c>4</td><td class=c>4</td><td class=c>4</td></tr><tr><td>Instruction following</td><td class=c>5</td><td class=c>5</td><td class=c>5</td></tr><tr><td>Completeness</td><td class=c>4</td><td class=c>5</td><td class=c>4</td></tr><tr><td><b>Total / 25</b></td><td class=c><b>21</b></td><td class=c><b>23</b></td><td class=c><b>21</b></td></tr></tbody></table></div>
+<p><b>Result:</b> Gemini scored highest overall. Its answers were the most complete, for example the step-by-step energy calculation and the most detailed email. All three were equally accurate and followed every instruction, so the differences came from style and completeness rather than correctness.</p>
+
+<h2 id="c">Part C · Basic vs. detailed prompt</h2>
+<p>Same platform, two new conversations:</p>
+<blockquote class="prompt"><span class="lbl">Basic prompt</span>Tell me about cybersecurity.</blockquote>
+<blockquote class="prompt"><span class="lbl">Detailed prompt</span>You are explaining cybersecurity to first-year IT students with no professional cybersecurity experience. In 200 words or fewer, explain what cybersecurity is, give three common cybersecurity threats, and provide one real-world example for each. Use simple language and organize the answer using headings and bullet points.</blockquote>
+<div class="grid2">
+<figure><img src="../assets/img/lab1-partc-basic.png" alt="Basic prompt: long, general response (CIA triad, defense in depth, threat tables)" loading="lazy"><figcaption>Basic prompt: long, general response (CIA triad, defense in depth, threat tables)</figcaption></figure>
+<figure><img src="../assets/img/lab1-partc-detailed.png" alt="Detailed prompt: short, organized, one example per threat" loading="lazy"><figcaption>Detailed prompt: short, organized, one example per threat</figcaption></figure>
+</div>
+<div class="table-wrap"><table><thead><tr><th>Aspect</th><th>Basic prompt</th><th>Detailed prompt</th></tr></thead><tbody><tr><td>Level of detail</td><td>Overwhelming and very general</td><td>Just enough for the intended student level</td></tr><tr><td>Organization</td><td>Organized, but still overwhelming</td><td>Short and organized under headings</td></tr><tr><td>Audience fit</td><td>General, so it's a lot for a beginner</td><td>Pitched at first-year students</td></tr><tr><td>Examples</td><td>Lists many threats, few concrete real-world cases</td><td>One real-world example per threat: a fake university email, WannaCry, a social media data breach</td></tr><tr><td>Overall usefulness</td><td>4 / 5</td><td>5 / 5</td></tr></tbody></table></div>
+<h3>What changed</h3>
+<p>The basic answer was overwhelming and generalized. The detailed prompt gave only what its audience needed. Naming the audience and setting limits had the biggest effect: the AI dropped advanced material and kept the examples simple. The word limit and formatting rules made it short and scannable while keeping the essential information.</p>
+
+<h2 id="d">Part D · Reflection</h2>
+<p><i>Are all conversational AI systems essentially the same?</i></p>
+<p>No. In Part B, all three got the same correct 72 kWh answer, but they differed in how complete and organized their answers were. Gemini scored highest because it gave the most complete answers, while ChatGPT was the most concise.</p>
+<p>What made the biggest difference, though, was the prompt. When I told the AI who the answer was for, it gave the information that audience actually needed. It organized the answer so I wouldn't get lost, followed the instructions and limits, and kept it short.</p>
+<p>The free features are fine for normal use, like asking questions or getting basic facts for a class. For deeper or more personalized work on complex assignments, you need to guide it. Specific instructions help it adapt to how you learn instead of giving generic answers every time. Without a good prompt, it treats every question like a blank slate, which isn't very helpful for college work. Tailoring prompts makes a huge difference between basic text and accurate, useful output.</p>
+
+<nav class="pager"><a href="assignment-1.html"><span>&larr; Previous</span><b>Assignment #1</b></a><a href="lab-2.html" style="text-align:right"><span>Next &rarr;</span><b>Lab #2</b></a></nav>
+</article>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <span>John Michael C. Agustin · BSIT 4A · Angeles University Foundation</span>
+  <span><a href="https://github.com/JmAgustin01">GitHub</a> · <a href="https://www.linkedin.com/in/john-michael-agustin-b46901378">LinkedIn</a> · <a href="https://jmagustin01.github.io">Main portfolio</a></span>
+</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+</body>
+</html>

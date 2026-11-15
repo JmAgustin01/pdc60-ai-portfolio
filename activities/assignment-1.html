@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assignment #1 · John Michael C. Agustin · PDC60 AI Portfolio</title>
+<meta name="description" content="AI systems I use, LLMs vs. rule-based chatbots, the conversational AI ecosystem, and what a university should check before deploying an AI assistant.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../index.html"><span class="dot">JM</span>PDC60 AI Portfolio</a>
+  <nav class="site-nav"><a href="../index.html">Home</a><a href="../projects/kualta-chatbot.html">Kualta Chatbot</a><a href="../index.html#activities" class=on>Activities</a><a href="../index.html#about">About</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+<div class="page-head">
+  <div class="crumbs"><a href="../index.html">Home</a> / <a href="../index.html#activities">Activities</a> / Assignment #1</div>
+  <span class="eyebrow"><span class="tag ">Assignment</span> Jul 22, 2026</span>
+  <h1>Assignment #1: Foundations of Conversational AI</h1>
+  <p class="lede">AI systems I use, LLMs vs. rule-based chatbots, the conversational AI ecosystem, and what a university should check before deploying an AI assistant.</p>
+  <div class="facts"><span class="chip">Type <b>Written assignment</b></span><span class="chip">Questions <b>4</b></span></div>
+  <div class="toc"><a href="#q1">AI systems I use</a><a href="#q2">LLMs vs. rule-based</a><a href="#q3">The ecosystem</a><a href="#q4">Deployment considerations</a></div>
+</div>
+<article>
+
+<h2 id="q1">1. Conversational AI systems I use</h2>
+<p>The assistant I use most is <b>Gemini</b>. Three real tasks I used it for:</p>
+<div class="table-wrap"><table><thead><tr><th>Task</th><th>How it helped</th><th>Limitation I ran into</th></tr></thead><tbody><tr><td>Reformatting a drive</td><td>Walked me through the steps and suggested fixes when it failed.</td><td>The real cause was a broken connecting wire. The AI couldn't see that, so some of its suggestions didn't apply.</td></tr><tr><td>Making a new schedule</td><td>Turned my list of classes and tasks into an organized schedule quickly.</td><td>I still had to check it against my real commitments.</td></tr><tr><td>Troubleshooting a game bug</td><td>Suggested possible causes and things to try.</td><td>Some suggestions worked and some didn't.</td></tr></tbody></table></div>
+<div class="callout warn"><strong>My rule of thumb</strong><p>AI is helpful for suggesting what to try, but don't rely on it fully. A problem can have causes it can't see, like a physical fault.</p></div>
+
+<h2 id="q2">2. Large Language Models vs. rule-based chatbots</h2>
+<p>Traditional rule-based chatbots are basically giant if-else statements. If the user doesn't type the exact keyword the developer mapped out, the bot breaks or loops.</p>
+<p>Large Language Models are different. Instead of hard-coded rules, they use neural networks trained on huge amounts of text, so they can work with the meaning and context of what I ask. They generate a response probabilistically, predicting the next most likely token, one token at a time.</p>
+<h3>Strengths</h3>
+<p>Flexibility. When I ask an LLM to troubleshoot Laravel routing or fix a database migration, it keeps the context of my earlier prompts and handles multi-part instructions without breaking.</p>
+<h3>Limitations and risks</h3>
+<ul>
+  <li><b>Hallucinations:</b> sometimes the answers are simply wrong, even when they sound confident.</li>
+  <li><b>Bias:</b> answers can be shaped by earlier chats or by how the conversation was framed.</li>
+  <li><b>Over-reliance:</b> because it sounds sure, it's easy to skip checking the answer.</li>
+</ul>
+
+<h2 id="q3">3. The conversational AI ecosystem</h2>
+<p>A conversational AI system looks a lot like the full-stack web apps we build, with a reasoning engine in the middle. It takes the whole system working together to give a reliable answer.</p>
+<div class="flow">
+<div class="step"><div class="k">1</div><div><b>User and interface</b><p>The front end, like the Bootstrap layouts I build, where the user types a prompt.</p></div></div>
+<div class="step"><div class="k">2</div><div><b>Databases and retrieval</b><p>Vector databases find relevant context quickly. Relational databases like MySQL store sessions and authentication rules.</p></div></div>
+<div class="step"><div class="k">3</div><div><b>LLM</b><p>The core engine. It combines my prompt with the retrieved data to generate the response.</p></div></div>
+<div class="step"><div class="k">4</div><div><b>Evaluation</b><p>Logging errors and user feedback behind the scenes so the bot improves over time.</p></div></div>
+</div>
+<p class="muted">I later built exactly this kind of system in the <a href="../projects/kualta-chatbot.html">Kualta chatbot</a>, with safety screening and human handoff added.</p>
+
+<h2 id="q4">4. Before AUF deploys an AI assistant for students</h2>
+<div class="table-wrap"><table><thead><tr><th>Consideration</th><th>Why it matters</th><th>Strategy</th></tr></thead><tbody><tr><td><b>Academic integrity</b></td><td>Students might use it to write whole system modules or essays instead of learning the material.</td><td>Set the system prompt to act strictly as a tutor: for capstone code it gives hints and points out syntax errors, but doesn't write the whole script.</td></tr><tr><td><b>Data privacy</b></td><td>Students may share grades, financial issues or personal records with the chatbot.</td><td>Database-level access control so the AI only sees the logged-in student's records, and a private deployment so prompts aren't used to train public models.</td></tr><tr><td><b>Factual reliability</b></td><td>A wrong lab schedule, prerequisite or tuition deadline causes real problems for students.</td><td>RAG grounded only in official AUF registrar documents and handbooks. If the answer isn't there, it says “I don't know, please ask your professor.”</td></tr><tr><td><b>Accessibility</b></td><td>Not everyone has a high-end laptop or stable internet.</td><td>A lightweight web portal, or integration into the existing LMS, so any device can use it.</td></tr></tbody></table></div>
+
+<nav class="pager"><a href="../projects/kualta-chatbot.html"><span>&larr; Featured project</span><b>Kualta Chatbot</b></a><a href="lab-1.html" style="text-align:right"><span>Next &rarr;</span><b>Lab #1</b></a></nav>
+</article>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <span>John Michael C. Agustin · BSIT 4A · Angeles University Foundation</span>
+  <span><a href="https://github.com/JmAgustin01">GitHub</a> · <a href="https://www.linkedin.com/in/john-michael-agustin-b46901378">LinkedIn</a> · <a href="https://jmagustin01.github.io">Main portfolio</a></span>
+</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+</body>
+</html>

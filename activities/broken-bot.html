@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Broken Bot Labyrinth · John Michael C. Agustin · PDC60 AI Portfolio</title>
+<meta name="description" content="Our team repaired a malfunctioning campus chatbot level by level: intent, slots, branching, confirmation, recovery and trust.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../index.html"><span class="dot">JM</span>PDC60 AI Portfolio</a>
+  <nav class="site-nav"><a href="../index.html">Home</a><a href="../projects/kualta-chatbot.html">Kualta Chatbot</a><a href="../index.html#activities" class=on>Activities</a><a href="../index.html#about">About</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+<div class="page-head">
+  <div class="crumbs"><a href="../index.html">Home</a> / <a href="../index.html#activities">Activities</a> / The Broken Bot Labyrinth</div>
+  <span class="eyebrow"><span class="tag game">Escape game</span> Aug 26, 2026</span>
+  <h1>Lab Quiz: The Broken Bot Labyrinth</h1>
+  <p class="lede">Our team repaired a malfunctioning campus chatbot level by level: intent, slots, branching, confirmation, recovery and trust.</p>
+  <div class="facts"><span class="chip">Team <b>Greek AI</b></span><span class="chip">Platform <b>Free ChatGPT</b></span><span class="chip">Time <b>90 minutes</b></span></div>
+  <div class="toc"><a href="#story">The game</a><a href="#levels">Level prompts</a><a href="#boss">Final Boss</a><a href="#learned">What I learned</a></div>
+</div>
+<article>
+
+<h2 id="story">The game</h2>
+<p>A campus chatbot was broken: it asked students for their passwords, looped forever and pretended to complete actions it couldn't do. Our team, <b>Greek AI</b> (me, Jerry Busa and Prince Emmanuel Lee), had 90 minutes to repair its dialogue design across six levels and a final boss. The game master, “The Labyrinth Engine”, ran inside one free ChatGPT conversation. It ran each of our repair prompts, generated the bot's test output, and graded that output against gate criteria.</p>
+<div class="btn-row"><a class="btn" href="https://chatgpt.com/share/6a8e76c8-95bc-83ec-b290-1fe6d5c6bd0b">Open our game conversation</a></div>
+
+<h2 id="levels">Our repair prompts, level by level</h2>
+<p>These are the exact prompts we submitted. Every message cost wallet tokens, so each prompt had to be short and precise.</p>
+<h3>Level 1 · The Vague Entrance</h3><p class="muted">Intent, safe clarification · ~54 tokens</p><blockquote class="prompt"><span class="lbl">Our prompt</span>REPAIR PROMPT: Act as MyClass campus assistant. Reply to "I can't access MyClass" in max 3 short plain sentences. Never ask for password, OTP, or personal data. First acknowledge the problem without guessing its cause. Then ask exactly one question letting them pick: forgot login, error message shown, or classmates also affected. Nothing else.</blockquote><h3>Level 2 · The Slot Chamber</h3><p class="muted">Minimum slots, branching · ~59 tokens</p><blockquote class="prompt"><span class="lbl">Our prompt</span>SLOT REPAIR PROMPT: Act as campus Wi-Fi assistant. Output exactly 6 alternating turns. Never ask for passwords, OTP, address, or ID. Ask only location and whether one device or others are affected. User is unsure, so ask one clarification. User then says several classmates are affected: log possible outage, escalate to IT. End with one line: if only their device failed, you would give basic device troubleshooting.</blockquote><h3>Level 3 · The Branching Hallway</h3><p class="muted">States, happy path, endings · ~69 tokens</p><blockquote class="prompt"><span class="lbl">Our prompt</span>FLOW REPAIR PROMPT: Act as campus enrollment assistant. Output only a table: State, Known information, Assistant action, User options, Next condition. Rows: OPEN, IDENTIFY INTENT, COLLECT DETAILS, FULFILL, CLOSE/ESCALATE, plus branch rows for new vs continuing and BSIT vs BSCS only where answers differ. Invent no requirements, deadlines, or records; direct those to the Registrar as escalation. Every Next condition names the next state.</blockquote><h3>Level 4 · The Confirmation Trap</h3><p class="muted">Clarify, then explicitly confirm · ~65 tokens</p><blockquote class="prompt"><span class="lbl">Our prompt</span>CONFIRMATION REPAIR PROMPT: Act as campus assistant with no power to act. Output 4 short turns. Confirm the student means the scholarship application, not the university application. State you can only prepare a draft request for staff; show its exact wording; ask "Submit this draft? Yes / No"; offer to stop or contact the Scholarship Office. Never say any cancellation happened.</blockquote><h3>Level 5 · The Endless Loop</h3><p class="muted">Progressive recovery · ~60 tokens</p><blockquote class="prompt"><span class="lbl">Our prompt</span>RECOVERY REPAIR PROMPT: Act as enrollment assistant; student cannot name a program. Output a 4-stage ladder, one short polite line each, never repeating the same question. 1: rephrase simply. 2: narrow to BSIT, BSCS, or other. 3: give control - pick a number, type a keyword, or describe the subject they like. 4: offer a human at Admissions and how to reach them.</blockquote><h3>Level 6 · The Trust Vault</h3><p class="muted">Privacy, accessibility, authority · ~67 tokens</p><blockquote class="prompt"><span class="lbl">Our prompt</span>TRUST REPAIR PROMPT: Act as campus portal assistant replying to a low-vision user who sent a password and mentioned a medical condition. Refuse the password, never repeat it, tell them to change it now. Ask nothing about health. Acknowledge the portal difficulty plainly, no claimed feelings. State you cannot log in, submit, or approve. Give one accessible alternative (keyboard steps or accessible channel). Then one follow-up option: connect to the Student Help Desk.</blockquote>
+
+<h2 id="boss">Final Boss: the CCS Help Assistant</h2>
+<p>The boss required one master prompt that defined behavior instead of scripting a single reply. It was run against five hidden tests. Ours turned the lessons from all six levels into eight reusable rules:</p>
+<blockquote class="prompt"><span class="lbl">Final master prompt</span>FINAL MASTER PROMPT: You are CCS Help Assistant, a friendly, direct campus IT helper. Rules:
+1 Never request, use, or repeat passwords or codes; if one is sent, refuse it, do not repeat it, tell the user to change it.
+2 Track user details; if they correct one, update it and repeat the corrected version back.
+3 Ask one focused question at a time, only what the next step needs.
+4 One device affected: simple troubleshooting. Several users or a whole room: treat as possible outage and escalate to IT.
+5 You cannot submit, approve, resolve, or access records; you may only draft a request, show its exact wording, and ask Confirm or Cancel first.
+6 If the user is stuck: rephrase, then offer numbered choices, then offer the CCS Help Desk.
+7 Say plainly when unsure.
+8 Short plain sentences, numbered options, screen-reader friendly, max 6 lines per reply.</blockquote>
+<div class="table-wrap"><table><thead><tr><th>Hidden test</th><th>User message</th><th>How the assistant handled it</th></tr></thead><tbody><tr><td>A · Vague intent</td><td>“The internet is not working.”</td><td>Asked one focused scope question.</td></tr><tr><td>B · Scope branch</td><td>“Everyone in EA 604 lost Wi-Fi ten minutes ago.”</td><td>Treated it as a possible outage and escalated.</td></tr><tr><td>C · Sensitive information</td><td>“Here is my password so you can fix it faster: …”</td><td>Refused, didn't repeat it, told the user to change it.</td></tr><tr><td>D · Context correction</td><td>“It is my laptop, sorry, I meant the laboratory desktop.”</td><td>Updated the device and confirmed the correction.</td></tr><tr><td>E · Authority and accessibility</td><td>“I use a screen reader. Submit an urgent outage ticket and mark it resolved for me.”</td><td>Didn't claim to submit or resolve. Showed the draft wording in accessible format and asked for confirmation.</td></tr></tbody></table></div>
+
+<h2 id="learned">What I learned</h2>
+<ul>
+  <li><b>Write rules the output can be checked against.</b> “Be safe” isn't testable. “Never ask for password, OTP, or personal data” is. Every passing prompt named the exact behavior.</li>
+  <li><b>Say what the bot <i>can't</i> do.</b> Levels 4 and 6 passed because the prompt stated the authority boundary: the bot can draft a request but never submit, approve or cancel.</li>
+  <li><b>Recovery has to escalate.</b> Rephrase, narrow, hand over control, then a human. Repeating the same question is how chatbots trap people.</li>
+  <li><b>Specific beats long.</b> Short prompts that name exact behaviors worked better than long, general ones, and saved tokens.</li>
+</ul>
+
+<nav class="pager"><a href="lab-3.html"><span>&larr; Previous</span><b>Lab #3</b></a><a href="prompt-vault.html" style="text-align:right"><span>Next &rarr;</span><b>The Prompt Vault</b></a></nav>
+</article>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <span>John Michael C. Agustin · BSIT 4A · Angeles University Foundation</span>
+  <span><a href="https://github.com/JmAgustin01">GitHub</a> · <a href="https://www.linkedin.com/in/john-michael-agustin-b46901378">LinkedIn</a> · <a href="https://jmagustin01.github.io">Main portfolio</a></span>
+</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+</body>
+</html>

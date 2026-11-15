@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Prompt Vault · John Michael C. Agustin · PDC60 AI Portfolio</title>
+<meta name="description" content="A team escape game run by an AI game master: zero-shot, few-shot and role prompts, then RTCFC, COSTAR and RACE.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../index.html"><span class="dot">JM</span>PDC60 AI Portfolio</a>
+  <nav class="site-nav"><a href="../index.html">Home</a><a href="../projects/kualta-chatbot.html">Kualta Chatbot</a><a href="../index.html#activities" class=on>Activities</a><a href="../index.html#about">About</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+<div class="page-head">
+  <div class="crumbs"><a href="../index.html">Home</a> / <a href="../index.html#activities">Activities</a> / The Prompt Vault</div>
+  <span class="eyebrow"><span class="tag game">Escape game</span> Aug 26, 2026</span>
+  <h1>Lab Quiz: The Prompt Vault, Operation Six Locks</h1>
+  <p class="lede">A team escape game run by an AI game master: zero-shot, few-shot and role prompts, then RTCFC, COSTAR and RACE.</p>
+  <div class="facts"><span class="chip">Team <b>Greek AI</b></span><span class="chip">Platform <b>Free ChatGPT</b></span><span class="chip">Time <b>90 minutes</b></span></div>
+  <div class="toc"><a href="#story">The game</a><a href="#locks">The six locks</a><a href="#frameworks">Frameworks</a><a href="#takeaways">Takeaways</a></div>
+</div>
+<article>
+
+<div class="btn-row"><a class="btn" href="https://chatgpt.com/share/6a8e8e45-e0e8-83ec-ad2c-2794f413aa5c">Open our game conversation</a></div>
+<p class="muted">Team Greek AI: John Michael Agustin, Jerry Busa Jr. and Prince Emmanuel Lee, BSIT 4-A.</p>
+
+<h2 id="story">The game</h2>
+<p>A corrupted instruction sealed the “Experimental Prompt Vault.” Our team had 90 minutes to get through six locks and a final vault. The game master was <b>ARGUS</b>, an AI running inside a single free ChatGPT conversation from one master prompt. ARGUS tested our prompts, released puzzles, tracked a token wallet and kept an append-only ledger of every message.</p>
+<div class="callout warn"><strong>The catch: a token budget</strong><p>We started with 1,500 estimated input tokens. Every prompt, question, correction and unlock guess cost tokens, and a hint cost 40. Short, precise prompts weren't just good style, they were how you survived.</p></div>
+
+<h2 id="locks">The six locks</h2>
+<p>Each door had two phases: a <b>system test</b>, where ARGUS ran our prompt on hidden inputs and checked the output against gate criteria, then a <b>puzzle</b> to actually open the door.</p>
+<div class="table-wrap"><table><thead><tr><th>Lock</th><th>Prompting skill</th><th>What our prompt had to do</th></tr></thead><tbody><tr><td>1 · Blank-Slate</td><td>Zero-shot</td><td>Classify campus help tickets into ACCESS, NETWORK, HARDWARE or OTHER, with no examples and a reason of five words or fewer.</td></tr><tr><td>2 · Pattern</td><td>Few-shot</td><td>Use at least two accurate demonstrations so a new ticket gets exactly <code>NETWORK | MULTIPLE USERS | ESCALATE OUTAGE</code>.</td></tr><tr><td>3 · Identity</td><td>Role-based</td><td>Audit a bot that asked for a password, using a meaningful role (like a conversational UX auditor), in a FINDING | RISK | FIX table.</td></tr><tr><td>4 · Five Components</td><td>RTCFC</td><td>A five-turn password-recovery dialogue that never asks for passwords and escalates safely.</td></tr><tr><td>5 · Six Signals</td><td>COSTAR</td><td>An 80 to 100 word maintenance announcement for first-year students, using only the given facts.</td></tr><tr><td>6 · Four Commands</td><td>RACE</td><td>A four-stage recovery ladder for a frustrated user: rephrase, narrow, offer control, escalate to a human.</td></tr><tr><td>Final · Master Vault</td><td>All combined</td><td>A campus IT triage prompt with a role, few-shot examples and one named framework, passing four hidden tests.</td></tr></tbody></table></div>
+
+<h2 id="frameworks">Frameworks used</h2>
+<div class="grid3">
+<div class="card"><h4>RTCFC</h4><p class="muted">Role, Task, Context, Format, Constraints</p></div>
+<div class="card"><h4>COSTAR</h4><p class="muted">Context, Objective, Style, Tone, Audience, Response</p></div>
+<div class="card"><h4>RACE</h4><p class="muted">Role, Action, Context, Expectation</p></div>
+</div>
+
+<h2 id="takeaways">What I took from it</h2>
+<ul>
+  <li><b>Gate criteria are like a rubric for prompts.</b> ARGUS judged the actual output, not whether the prompt claimed to include something. A prompt that says “be safe” but produces a password request still fails.</li>
+  <li><b>Few-shot examples must be consistent.</b> One badly formatted demonstration teaches the model the wrong pattern.</li>
+  <li><b>Safety rules belong in the prompt.</b> Several locks failed automatically if the output asked for passwords or invented links.</li>
+  <li><b>Constraints save tokens.</b> A clear format and limit up front meant fewer retries, and retries were what drained the wallet.</li>
+</ul>
+
+<nav class="pager"><a href="broken-bot.html"><span>&larr; Previous</span><b>The Broken Bot Labyrinth</b></a><a href="context-archive.html" style="text-align:right"><span>Next &rarr;</span><b>The Lost Context Archive</b></a></nav>
+</article>
+</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <span>John Michael C. Agustin · BSIT 4A · Angeles University Foundation</span>
+  <span><a href="https://github.com/JmAgustin01">GitHub</a> · <a href="https://www.linkedin.com/in/john-michael-agustin-b46901378">LinkedIn</a> · <a href="https://jmagustin01.github.io">Main portfolio</a></span>
+</div></footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+</body>
+</html>
