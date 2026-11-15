@@ -7,7 +7,7 @@
 <meta name="description" content="AI systems I use, LLMs vs. rule-based chatbots, the conversational AI ecosystem, and what a university should check before deploying an AI assistant.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../assets/style.css?v=3">
+<link rel="stylesheet" href="../assets/style.css?v=4">
 </head>
 <body>
 <header class="site-head"><div class="wrap">
@@ -70,6 +70,39 @@
 document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
 lb.addEventListener('click',function(){lb.classList.remove('open');});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+<div class="progress" aria-hidden="true"></div>
+<script>
+(function(){
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* scroll reveal */
+var els=document.querySelectorAll('h2, .tl-item, .card, .refl, .table-wrap, figure, blockquote, .flow .step, .callout, .pull');
+if('IntersectionObserver' in window && !reduce){
+  els.forEach(function(e){e.classList.add('rv');});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+}
+/* count-up stats */
+document.querySelectorAll('[data-count]').forEach(function(n){
+  if(reduce)return;var end=+n.dataset.count,t0=null;n.textContent='0';
+  var o=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;o.disconnect();
+    requestAnimationFrame(function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);n.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);});
+  });o.observe(n);
+});
+/* reading progress */
+var bar=document.querySelector('.progress');
+function prog(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';}
+window.addEventListener('scroll',prog,{passive:true});prog();
+/* filters */
+var fs=document.querySelectorAll('.filters .f'),items=document.querySelectorAll('.tl-item'),cnt=document.getElementById('fcount'),empty=document.querySelector('.empty');
+function apply(k){var n=0;items.forEach(function(li){var show=k==='all'||(k==='hl'?li.dataset.hl==='1':li.dataset.kind===k);
+  li.classList.toggle('gone',!show);if(show){n++;li.classList.remove('pop');void li.offsetWidth;li.classList.add('pop');}});
+  fs.forEach(function(b){var on=b.dataset.f===k;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);});
+  if(cnt)cnt.textContent=n+(n===1?' item':' items');if(empty)empty.hidden=n>0;
+  try{history.replaceState(null,'',k==='all'?location.pathname:'#f='+k);}catch(e){}}
+fs.forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.f);});});
+var m=location.hash.match(/^#f=(\w+)/);if(m&&fs.length)apply(m[1]);
+})();
 </script>
 </body>
 </html>

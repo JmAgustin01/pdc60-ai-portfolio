@@ -7,7 +7,7 @@
 <meta name="description" content="PDC60 AI portfolio of John Michael C. Agustin, BSIT 4A, Angeles University Foundation.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2317171c%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 font-weight=%22700%22 fill=%22%23f5f3ee%22 text-anchor=%22middle%22%3EJM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 <header class="site-head"><div class="wrap">
@@ -38,41 +38,46 @@
       <div class="btn-row"><a class="btn" href="projects/kualta-chatbot.html">Read the case study &rarr;</a><a class="btn ghost" href="https://github.com/JmAgustin01/kualta-chatbot">View code on GitHub</a></div>
     </div>
     <div class="stats">
-      <div class="stat"><div class="n">83</div><div class="l">automated tests, all passing</div></div>
-      <div class="stat"><div class="n">29</div><div class="l">evaluation questions with pass rules</div></div>
-      <div class="stat"><div class="n">20</div><div class="l">client business rules (CB-01 to CB-20) built in</div></div>
+      <div class="stat"><div class="n" data-count="83">83</div><div class="l">automated tests, all passing</div></div>
+      <div class="stat"><div class="n" data-count="29">29</div><div class="l">evaluation questions with pass rules</div></div>
+      <div class="stat"><div class="n" data-count="20">20</div><div class="l">client business rules (CB-01 to CB-20) built in</div></div>
       <div class="stat"><div class="n">$0</div><div class="l">to run: free tiers only, no AWS</div></div>
     </div>
   </div>
 </section>
 
 <section id="activities">
-  <div class="section-head"><h2>Activities</h2><span class="muted">8 activities · in order</span></div>
-  <ol class="timeline"><li class="tl-item"><a href="activities/assignment-1.html">
+  <div class="section-head"><h2>Activities</h2><span class="muted" id="fcount">9 items</span></div>
+  <div class="filters" role="toolbar" aria-label="Filter activities"><button class="f on" data-f="all" aria-pressed="true">All<span>9</span></button><button class="f" data-f="hl" aria-pressed="false">&#9733; Highlights<span>4</span></button><button class="f" data-f="project" aria-pressed="false">Projects<span>1</span></button><button class="f" data-f="lab" aria-pressed="false">Labs<span>3</span></button><button class="f" data-f="game" aria-pressed="false">Escape games<span>3</span></button><button class="f" data-f="assign" aria-pressed="false">Assignments<span>1</span></button><button class="f" data-f="agent" aria-pressed="false">Agent build<span>1</span></button></div>
+  <ol class="timeline"><li class="tl-item" data-kind="assign" data-hl="0"><a href="activities/assignment-1.html">
   <div class="tl-num">01</div>
-  <div><div class="tl-meta"><span class="tag ">Assignment</span><span class="tl-date">Jul 22, 2026</span></div><div class="tl-title">Assignment #1</div><p class="tl-desc">AI systems I use, LLMs vs. rule-based chatbots, the conversational AI ecosystem, and what a university should check before deploying an AI assistant.</p></div>
-  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item"><a href="activities/lab-1.html">
+  <div><div class="tl-meta"><span class="tag">Assignment</span><span class="tl-date">Jul 22, 2026</span></div><div class="tl-title">Assignment #1</div><p class="tl-desc">AI systems I use, LLMs vs. rule-based chatbots, the conversational AI ecosystem, and what a university should check before deploying an AI assistant.</p></div>
+  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item" data-kind="lab" data-hl="0"><a href="activities/lab-1.html">
   <div class="tl-num">02</div>
-  <div><div class="tl-meta"><span class="tag lab">Lab</span><span class="tl-date">Jul 29, 2026</span></div><div class="tl-title">Lab #1</div><p class="tl-desc">Same prompts, three AIs. I compared ChatGPT, Gemini and Claude on features, accuracy and instruction following, then tested basic vs. detailed prompts.</p></div>
-  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item"><a href="activities/lab-2.html">
+  <div><div class="tl-meta"><span class="tag">Lab</span><span class="tl-date">Jul 29, 2026</span></div><div class="tl-title">Lab #1</div><p class="tl-desc">Same prompts, three AIs. I compared ChatGPT, Gemini and Claude on features, accuracy and instruction following, then tested basic vs. detailed prompts.</p></div>
+  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item hl" data-kind="lab" data-hl="1"><a href="activities/lab-2.html">
   <div class="tl-num">03</div>
-  <div><div class="tl-meta"><span class="tag lab">Lab</span><span class="tl-date">Aug 5, 2026</span></div><div class="tl-title">Lab #2</div><p class="tl-desc">Controlled experiments on what AI does well and where it fails: ambiguity, false premises, hallucinated references, context memory and human judgment.</p></div>
-  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item"><a href="activities/lab-3.html">
+  <div><div class="tl-meta"><span class="tag">Lab</span><span class="tl-date">Aug 5, 2026</span><span class="badge">&#9733; Highlight</span></div><div class="tl-title">Lab #2</div><p class="tl-desc">Controlled experiments on what AI does well and where it fails: ambiguity, false premises, hallucinated references, context memory and human judgment.</p></div>
+  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item" data-kind="lab" data-hl="0"><a href="activities/lab-3.html">
   <div class="tl-num">04</div>
-  <div><div class="tl-meta"><span class="tag lab">Lab</span><span class="tl-date">Aug 19, 2026</span></div><div class="tl-title">Lab #3</div><p class="tl-desc">I rewrote “Explain subnetting” using RTCFC, COSTAR, RISEN, CRAFT, RACE, TRACE and CRISPE.</p></div>
-  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item"><a href="activities/broken-bot.html">
+  <div><div class="tl-meta"><span class="tag">Lab</span><span class="tl-date">Aug 19, 2026</span></div><div class="tl-title">Lab #3</div><p class="tl-desc">I rewrote “Explain subnetting” using RTCFC, COSTAR, RISEN, CRAFT, RACE, TRACE and CRISPE.</p></div>
+  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item hl" data-kind="game" data-hl="1"><a href="activities/broken-bot.html">
   <div class="tl-num">05</div>
-  <div><div class="tl-meta"><span class="tag game">Escape game</span><span class="tl-date">Aug 26, 2026</span></div><div class="tl-title">The Broken Bot Labyrinth</div><p class="tl-desc">Our team repaired a malfunctioning campus chatbot level by level: intent, slots, branching, confirmation, recovery and trust.</p></div>
-  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item"><a href="activities/prompt-vault.html">
+  <div><div class="tl-meta"><span class="tag">Escape game</span><span class="tl-date">Aug 26, 2026</span><span class="badge">&#9733; Highlight</span></div><div class="tl-title">The Broken Bot Labyrinth</div><p class="tl-desc">Our team repaired a malfunctioning campus chatbot level by level: intent, slots, branching, confirmation, recovery and trust.</p></div>
+  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item" data-kind="game" data-hl="0"><a href="activities/prompt-vault.html">
   <div class="tl-num">06</div>
-  <div><div class="tl-meta"><span class="tag game">Escape game</span><span class="tl-date">Aug 26, 2026</span></div><div class="tl-title">The Prompt Vault</div><p class="tl-desc">A team escape game run by an AI game master: zero-shot, few-shot and role prompts, then RTCFC, COSTAR and RACE.</p></div>
-  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item"><a href="activities/context-archive.html">
+  <div><div class="tl-meta"><span class="tag">Escape game</span><span class="tl-date">Aug 26, 2026</span></div><div class="tl-title">The Prompt Vault</div><p class="tl-desc">A team escape game run by an AI game master: zero-shot, few-shot and role prompts, then RTCFC, COSTAR and RACE.</p></div>
+  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item" data-kind="game" data-hl="0"><a href="activities/context-archive.html">
   <div class="tl-num">07</div>
-  <div><div class="tl-meta"><span class="tag game">Escape game</span><span class="tl-date">Sep 2, 2026</span></div><div class="tl-title">The Lost Context Archive</div><p class="tl-desc">A second escape game on context management and retrieval-aware prompting: state, compression, retrieval filters, grounding and citations.</p></div>
-  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item"><a href="activities/agentic-ai.html">
+  <div><div class="tl-meta"><span class="tag">Escape game</span><span class="tl-date">Sep 2, 2026</span></div><div class="tl-title">The Lost Context Archive</div><p class="tl-desc">A second escape game on context management and retrieval-aware prompting: state, compression, retrieval filters, grounding and citations.</p></div>
+  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item hl" data-kind="agent" data-hl="1"><a href="activities/agentic-ai.html">
   <div class="tl-num">08</div>
-  <div><div class="tl-meta"><span class="tag agent">Agent build</span><span class="tl-date">Nov 3, 2026</span></div><div class="tl-title">Agentic AI</div><p class="tl-desc">I built a reusable Claude Skill that organizes my lecture files with approval gates and turns lectures into grounded notes, quizzes and a study index.</p></div>
+  <div><div class="tl-meta"><span class="tag">Agent build</span><span class="tl-date">Nov 3, 2026</span><span class="badge">&#9733; Highlight</span></div><div class="tl-title">Agentic AI</div><p class="tl-desc">I built a reusable Claude Skill that organizes my lecture files with approval gates and turns lectures into grounded notes, quizzes and a study index.</p></div>
+  <div class="tl-arrow">&rarr;</div></a></li><li class="tl-item hl" data-kind="project" data-hl="1"><a href="projects/kualta-chatbot.html">
+  <div class="tl-num">09</div>
+  <div><div class="tl-meta"><span class="tag">Project</span><span class="tl-date">Nov 2026</span><span class="badge">&#9733; Highlight</span></div><div class="tl-title">Kualta Agency Support Chatbot</div><p class="tl-desc">Our team's rules-first RAG chatbot on Facebook Messenger, with human handoff, safety screening and an evaluation set.</p></div>
   <div class="tl-arrow">&rarr;</div></a></li></ol>
+  <p class="empty muted" hidden>Nothing here yet.</p>
 </section>
 
 <section id="reflection" class="reflection">
@@ -124,6 +129,39 @@
 document.querySelectorAll('figure img').forEach(function(i){i.style.cursor='zoom-in';i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.classList.add('open');});});
 lb.addEventListener('click',function(){lb.classList.remove('open');});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
+<div class="progress" aria-hidden="true"></div>
+<script>
+(function(){
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* scroll reveal */
+var els=document.querySelectorAll('h2, .tl-item, .card, .refl, .table-wrap, figure, blockquote, .flow .step, .callout, .pull');
+if('IntersectionObserver' in window && !reduce){
+  els.forEach(function(e){e.classList.add('rv');});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+}
+/* count-up stats */
+document.querySelectorAll('[data-count]').forEach(function(n){
+  if(reduce)return;var end=+n.dataset.count,t0=null;n.textContent='0';
+  var o=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;o.disconnect();
+    requestAnimationFrame(function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);n.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);});
+  });o.observe(n);
+});
+/* reading progress */
+var bar=document.querySelector('.progress');
+function prog(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';}
+window.addEventListener('scroll',prog,{passive:true});prog();
+/* filters */
+var fs=document.querySelectorAll('.filters .f'),items=document.querySelectorAll('.tl-item'),cnt=document.getElementById('fcount'),empty=document.querySelector('.empty');
+function apply(k){var n=0;items.forEach(function(li){var show=k==='all'||(k==='hl'?li.dataset.hl==='1':li.dataset.kind===k);
+  li.classList.toggle('gone',!show);if(show){n++;li.classList.remove('pop');void li.offsetWidth;li.classList.add('pop');}});
+  fs.forEach(function(b){var on=b.dataset.f===k;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);});
+  if(cnt)cnt.textContent=n+(n===1?' item':' items');if(empty)empty.hidden=n>0;
+  try{history.replaceState(null,'',k==='all'?location.pathname:'#f='+k);}catch(e){}}
+fs.forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.f);});});
+var m=location.hash.match(/^#f=(\w+)/);if(m&&fs.length)apply(m[1]);
+})();
 </script>
 </body>
 </html>
